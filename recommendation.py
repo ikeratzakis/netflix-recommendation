@@ -16,8 +16,8 @@ netflix_df = netflix_df.dropna(axis=0)
 print('Data size after removing missing data:', len(netflix_df))
 # Most common country and content type distribution
 print('Most popular country:', netflix_df.country.mode())
-# sns.catplot(x='type', kind='count', data=netflix_df)
-# plt.show()
+sns.catplot(x='type', kind='count', data=netflix_df)
+plt.show()
 
 # Recommendation system, construct vector representations of movies(while keeping a dict with their titles)
 # A trick to keep correct ordering: First we figure out what shape the following tf idf matrix will have (spoiler alert:
