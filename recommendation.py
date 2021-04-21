@@ -62,6 +62,7 @@ for movie, similarities in similarity_dict.items():
     similarity_dict[movie] = sorted(similarities, key=itemgetter(1), reverse=True)[:100]
 
 
+# We can merge these two functions in one and use an if-else logic instead, though the original project requested two seperate functions. 
 def get_similar_movies_by_title(title, N, method):
     similarities = []
     print('Searching for similar movies...please wait')
